@@ -22,8 +22,8 @@ PRODUCT_MODEL := Pixel 9 Pro XL
 PRODUCT_NAME := calyx_$(DEVICE_CODENAME)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
-    BuildDesc="komodo-user 15 AP3A.241105.008 12485168 release-keys" \
-    BuildFingerprint=google/komodo/komodo:15/AP3A.241105.008/12485168:user/release-keys \
+    BuildDesc="komodo-user 15 AP4A.241205.013 12621605 release-keys" \
+    BuildFingerprint=google/komodo/komodo:15/AP4A.241205.013/12621605:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
