@@ -39,7 +39,7 @@ product/etc/permissions/com.android.sdm.plugins.dcmo.xml
 product/etc/permissions/com.android.sdm.plugins.diagmon.xml
 product/lib64/libdmengine.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmengine.so
 product/lib64/libdmjavaplugin.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmjavaplugin.so
-product/priv-app/CarrierSettings_signed_47.0.602606545/CarrierSettings_signed_47.0.602606545.apk;PRESIGNED
+product/priv-app/CarrierSettings_signed_49.0.645958608/CarrierSettings_signed_49.0.645958608.apk;PRESIGNED
 product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
 product/priv-app/ConnMO/ConnMO.apk
 product/priv-app/DCMO/DCMO.apk
