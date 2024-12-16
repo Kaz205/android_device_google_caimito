@@ -6,24 +6,24 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/calyx/config/common_phone.mk)
+$(call inherit-product, vendor/statix/config/common_phone.mk)
 
 # Inherit device configuration
-DEVICE_CODENAME := caiman
+DEVICE_CODENAME := komodo
 DEVICE_PATH := device/google/caimito
-VENDOR_PATH := vendor/google/caiman
-$(call inherit-product, device/google/zumapro/calyx_common.mk)
-$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-calyx.mk)
+VENDOR_PATH := vendor/google/komodo
+$(call inherit-product, device/google/zumapro/statix_common.mk)
+$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-statix.mk)
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
-PRODUCT_MODEL := Pixel 9 Pro
-PRODUCT_NAME := calyx_$(DEVICE_CODENAME)
+PRODUCT_MODEL := Pixel 9 Pro XL
+PRODUCT_NAME := statix_$(DEVICE_CODENAME)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
-    BuildDesc="caiman-user 15 AP4A.241205.013 12621605 release-keys" \
-    BuildFingerprint=google/caiman/caiman:15/AP4A.241205.013/12621605:user/release-keys \
+    BuildDesc="komodo-user 15 AP4A.241205.013 12621605 release-keys" \
+    BuildFingerprint=google/komodo/komodo:15/AP4A.241205.013/12621605:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 PRODUCT_RESTRICT_VENDOR_FILES := false

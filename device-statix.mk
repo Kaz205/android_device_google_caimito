@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-calyx
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-statix
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \

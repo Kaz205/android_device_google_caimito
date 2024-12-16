@@ -6,20 +6,26 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/calyx/config/common_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
+$(call inherit-product, vendor/statix/config/gsm.mk)
+
+# Parts
+$(call inherit-product, vendor/google/pixelparts/pixelparts.mk)
+$(call inherit-product, vendor/google/pixelparts/face/face.mk)
+$(call inherit-product, vendor/google/pixelparts/powershare/device.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := tokay
 DEVICE_PATH := device/google/caimito
 VENDOR_PATH := vendor/google/tokay
-$(call inherit-product, device/google/zumapro/calyx_common.mk)
-$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-calyx.mk)
+$(call inherit-product, device/google/zumapro/statix_common.mk)
+$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-statix.mk)
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 9
-PRODUCT_NAME := calyx_$(DEVICE_CODENAME)
+PRODUCT_NAME := statix_$(DEVICE_CODENAME)
 
 PRODUCT_BUILD_PROP_OVERRIDES := \
     BuildDesc="tokay-user 15 AP4A.241205.013 12621605 release-keys" \

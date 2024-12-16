@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-include $(DEVICE_PATH)/BoardConfig-calyx.mk
+include $(DEVICE_PATH)/BoardConfig-statix.mk
 
 include $(VENDOR_PATH)/BoardConfigVendor.mk
