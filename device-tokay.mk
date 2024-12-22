@@ -64,12 +64,7 @@ include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
-ifdef RELEASE_SVN_TOKAY
-TARGET_SVN ?= $(RELEASE_SVN_TOKAY)
-else
-# Set this for older releases that don't use build flag
-TARGET_SVN ?= 04
-endif
+TARGET_SVN ?= 10
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.svn=$(TARGET_SVN)
