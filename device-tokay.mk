@@ -50,9 +50,7 @@ endif
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
 
-ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
 USE_AUDIO_HAL_AIDL := true
-endif
 
 include device/google/caimito/audio/tokay/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
@@ -64,12 +62,7 @@ include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
-ifdef RELEASE_SVN_TOKAY
-TARGET_SVN ?= $(RELEASE_SVN_TOKAY)
-else
-# Set this for older releases that don't use build flag
-TARGET_SVN ?= 04
-endif
+TARGET_SVN ?= 12
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.svn=$(TARGET_SVN)
