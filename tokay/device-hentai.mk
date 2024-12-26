@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, $(DEVICE_PATH)/device-lineage.mk)
+$(call inherit-product, $(DEVICE_PATH)/device-hentai.mk)
 
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/$(DEVICE_CODENAME)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/$(DEVICE_CODENAME)/overlay-hentai
 
 PRODUCT_PACKAGES += \
     PixelDisplayServiceOverlayTokay
