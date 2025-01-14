@@ -2772,6 +2772,8 @@ vendor/firmware/uecapconfig/lte_ct3.binarypb
 vendor/firmware/uecapconfig/lte_mmw.binarypb
 vendor/firmware/uecapconfig/lte_sub6.binarypb
 vendor/framework/com.google.android.camera.experimental2024.jar
+vendor/framework/oat/arm64/com.google.android.camera.experimental2024.odex
+vendor/framework/oat/arm64/com.google.android.camera.experimental2024.vdex
 vendor/lib64/android.hardware.authsecret-impl.nos.so
 vendor/lib64/android.hardware.oemlock-impl.nos.so
 vendor/lib64/android.hardware.security.keymint-impl.nos.so
