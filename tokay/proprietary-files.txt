@@ -2,9 +2,6 @@
 
 # product partition
 
-# Adaptive Connectivity
-product/priv-app/SCONE-v45900/SCONE-v45900.apk;PRESIGNED
-
 # Audio
 product/etc/firmware/music_detector.descriptor
 product/etc/firmware/music_detector.sound_model
