@@ -26,14 +26,9 @@ RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
 RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR)
 $(call soong_config_set,caimito_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR))
 
-ifdef RELEASE_KERNEL_TOKAY_VERSION
-TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_TOKAY_VERSION)
-else
 TARGET_LINUX_KERNEL_VERSION ?= 6.1
-endif
 
-ifdef RELEASE_KERNEL_TOKAY_DIR
-TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_TOKAY_DIR)
+TARGET_KERNEL_DIR ?= device/google/caimito-kernels/6.1/25Q1-13000334
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_TOKAY_DIR)/kernel-headers
 
 ifneq ($(TARGET_BOOTS_16K),true)
@@ -41,11 +36,6 @@ PRODUCT_16K_DEVELOPER_OPTION := $(RELEASE_GOOGLE_TOKAY_16K_DEVELOPER_OPTION)
 endif
 
 include device/google/caimito/device-caimito-16k-common.mk
-
-else
-TARGET_KERNEL_DIR ?= device/google/caimito-kernels/6.1/24D1
-TARGET_BOARD_KERNEL_HEADERS ?= device/google/caimito-kernels/6.1/24D1/kernel-headers
-endif
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-tokay.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
@@ -71,7 +61,7 @@ include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
-TARGET_SVN ?= 18
+TARGET_SVN ?= 24
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.svn=$(TARGET_SVN)
