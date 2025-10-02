@@ -6,7 +6,13 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
+$(call inherit-product, vendor/statix/config/gsm.mk)
+
+# Parts
+$(call inherit-product, vendor/google/pixelparts/pixelparts.mk)
+$(call inherit-product, vendor/google/pixelparts/face/face.mk)
+$(call inherit-product, vendor/google/pixelparts/powershare/device.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := tokay
