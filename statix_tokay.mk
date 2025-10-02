@@ -19,8 +19,8 @@ DEVICE_CODENAME := tokay
 DEVICE_PATH := device/google/caimito
 VENDOR_PATH := vendor/google/tokay
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
-$(call inherit-product, device/google/zumapro/lineage_common.mk)
-$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
+$(call inherit-product, device/google/zumapro/statix_common.mk)
+$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-statix.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
