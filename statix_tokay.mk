@@ -36,4 +36,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=google/tokay/tokay:16/BP2A.250805.005/13691446:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
+INCLUDE_PIXEL_LAUNCHER := true
+
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
