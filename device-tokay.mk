@@ -26,11 +26,7 @@ RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
 RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR)
 $(call soong_config_set,caimito_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR))
 
-ifdef RELEASE_KERNEL_TOKAY_VERSION
-TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_TOKAY_VERSION)
-else
 TARGET_LINUX_KERNEL_VERSION ?= 6.1
-endif
 
 TARGET_KERNEL_DIR := device/google/caimito-kernels/calyx
 TARGET_BOARD_KERNEL_HEADERS := $(TARGET_KERNEL_DIR)/kernel-headers
@@ -53,12 +49,7 @@ include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
-ifdef RELEASE_SVN_TOKAY
-TARGET_SVN ?= $(RELEASE_SVN_TOKAY)
-else
-# Set this for older releases that don't use build flag
-TARGET_SVN ?= 04
-endif
+TARGET_SVN ?= 34
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.svn=$(TARGET_SVN)
