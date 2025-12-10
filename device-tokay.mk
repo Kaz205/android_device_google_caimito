@@ -102,9 +102,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PixelDisplayServiceOverlayTokay
 
-# PowerShare
-include hardware/google/pixel/powershare/device.mk
-
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
