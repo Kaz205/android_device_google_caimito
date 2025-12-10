@@ -23,6 +23,8 @@ DEVICE_PACKAGE_OVERLAYS += device/google/caimito/overlay-statix
 # Audio
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+PRODUCT_COPY_FILES += \
+    device/google/caimito/audio/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml
 
 include device/google/zumapro/device-shipping-common.mk
 
