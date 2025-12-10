@@ -119,7 +119,6 @@ vendor/etc/aoc/uplink_speaker_aec_on_config.pb
 vendor/etc/aoc/uplink_wired_headset_aec_off_config.pb
 vendor/etc/aoc/uplink_wired_headset_aec_on_config.pb
 vendor/etc/atc_profile.json
-vendor/etc/audio_platform_configuration.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/bluetooth/bluetooth_channel_sounding_calibration.json
 vendor/etc/bluetooth/bt_vendor.conf
