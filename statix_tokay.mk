@@ -5,7 +5,13 @@
 #
 
 # Inherit some common stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
+$(call inherit-product, vendor/statix/config/gsm.mk)
+
+# Parts
+$(call inherit-product, vendor/google/pixelparts/pixelparts.mk)
+$(call inherit-product, vendor/google/pixelparts/face/face.mk)
+$(call inherit-product, vendor/google/pixelparts/powershare/device.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := tokay
@@ -16,7 +22,7 @@ $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 9
-PRODUCT_NAME := lineage_$(DEVICE_CODENAME)
+PRODUCT_NAME := statix_$(DEVICE_CODENAME)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2424
@@ -26,5 +32,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="tokay-user 16 BP4A.260205.002 14624737 release-keys" \
     BuildFingerprint=google/tokay/tokay:16/BP4A.260205.002/14624737:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
+
+INCLUDE_PIXEL_LAUNCHER := true
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
