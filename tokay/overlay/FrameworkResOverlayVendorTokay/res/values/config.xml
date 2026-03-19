@@ -46,14 +46,6 @@
          -->
     <string name="config_mainBuiltInDisplayCutout">m 581.5,86.5 a 42,42 0 0 0 -84,0 42,42 0 0 0 84,0 z @left</string>
 
-    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
-         one single bounding rect per device edge to the app via
-         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
-         appearance of the cutout as much as possible, and may be smaller than
-         config_mainBuiltInDisplayCutout
-         -->
-    <string name="config_mainBuiltInDisplayCutoutRectApproximation">m 484.5,0 h 110 v 173 h -110 z @left</string>
-
     <!-- The stable device width and height in pixels. If these aren't set to a positive number
          then the device will use the width and height of the default display the first time it's
          booted.  -->
