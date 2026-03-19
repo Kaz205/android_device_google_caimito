@@ -244,6 +244,7 @@ etc/aconfig/flag.val
 etc/aconfig/package.map
 etc/aconfig_flags.pb
 etc/atrace/atrace_categories.txt
+etc/audio_platform_configuration.xml
 etc/boringssl_self_test.no_zygote.rc
 etc/boringssl_self_test.zygote32.rc
 etc/boringssl_self_test.zygote64.rc

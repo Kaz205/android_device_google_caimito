@@ -18,6 +18,10 @@ endif
 # Shipping API level
 SHIPPING_API_LEVEL := 34
 
+# Audio
+PRODUCT_COPY_FILES += \
+    device/google/caimito/audio/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml
+
 # Inherit from zumapro
 include device/google/zumapro/common.mk
 
